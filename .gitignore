@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.venv/
+.env
+.env.*
+.pytest_cache/
+.mypy_cache/
+.coverage
+dist/
+build/
+*.egg-info/
+
+# OS / IDE noise
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+
+
+app.py
+projects.txt
+requirements.txt
