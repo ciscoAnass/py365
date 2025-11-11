@@ -494,5 +494,9 @@ def get_system_disk_sensors():
                 'temperature': psutil.sensors_temperatures()[disk][0].current,
                 'health': psutil.disk_smart_info()[disk].health_status
             }
-        except (AttributeError, IndexError, KeyError):
-            disk_sensors[disk] =
+            except (AttributeError, IndexError, KeyError):
+                disk_sensors[disk] = {
+                    'temperature': None,
+                    'health': 'Unknown'
+                }
+        return disk_sensors
