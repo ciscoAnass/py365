@@ -448,4 +448,10 @@ class DriftDetector:
                     report.append(f"Config: {finding.config_file}")
                     report.append(f"Type: {finding.drift_type}")
                     report.append(f"Line: {finding.line_number}")
-                    report.append(f"Golden: {finding.golden_content
+                    report.append(f"Golden: {finding.golden_content}")
+                    report.append(f"Actual: {finding.actual_content}")
+                    report.append(f"Severity: {finding.severity.value}")
+                    report.append(f"Timestamp: {finding.timestamp}")
+                    report.append("-" * 80)
+
+        return "\n".join(report) + "\n"
